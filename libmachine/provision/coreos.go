@@ -70,7 +70,7 @@ func (provisioner *CoreOSProvisioner) GenerateDockerOptions(dockerPort int) (*Do
 		return nil, err
 	}
 
-	arg := "daemon"
+	arg := ""
 	if versioncmp.GreaterThanOrEqualTo(dockerVersion, "1.12.0") {
 		arg = ""
 	}
